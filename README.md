@@ -1,2 +1,2 @@
 # Jowkz
-This is an Udacity Personal App Project with a table view that shows your favourite Dad's Joke you bookmarked. The App allows you to fetch random Dad's jokes from an API and also bookmark your favourite joke using persistent storage.
+This is an Udacity Personal App Project. The App allows you to fetch random Dad's jokes from an API and also bookmark your favourite joke which will be stored in the app using persistent storage.
