@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ix0-Yh-Dw1">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--JowkzViewController-->
+        <scene sceneID="NDp-lf-vuL">
+            <objects>
+                <viewController title="JowkzViewController" id="Rc0-iN-C6b" customClass="JowkzViewController" customModule="Jowkz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M12-ee-BeB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3n-Ij-M0I" userLabel="Best Jokes to Make You Smile">
+                                <rect key="frame" x="65" y="20" width="244" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="AAP-Wy-2Oc"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Best Jokes to Make You Smile">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bns-T2-vMZ">
+                                <rect key="frame" x="65" y="494" width="244" height="38"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Next Joke">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchJokes:" destination="Rc0-iN-C6b" eventType="touchUpInside" id="Vim-2c-cF5"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4i8-3V-nEs">
+                                <rect key="frame" x="155" y="419" width="64" height="67"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w9t-bn-k40">
+                                <rect key="frame" x="65" y="101" width="244" height="252"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="252" id="dQ5-sw-F26"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJ2-jj-Ldi">
+                                <rect key="frame" x="65" y="377" width="244" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="aMT-ax-waS"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Add to Favourite">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="addFavourite:" destination="Rc0-iN-C6b" eventType="touchUpInside" id="NiH-CT-vka"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e3n-Ij-M0I" firstAttribute="top" secondItem="G2g-cy-wZe" secondAttribute="top" constant="20" id="0TX-y9-OX0"/>
+                            <constraint firstItem="bns-T2-vMZ" firstAttribute="centerX" secondItem="4i8-3V-nEs" secondAttribute="centerX" id="2p9-3n-Osi"/>
+                            <constraint firstItem="w9t-bn-k40" firstAttribute="leading" secondItem="G2g-cy-wZe" secondAttribute="leading" constant="65" id="9Q0-09-Ji6"/>
+                            <constraint firstItem="G2g-cy-wZe" firstAttribute="trailing" secondItem="bns-T2-vMZ" secondAttribute="trailing" constant="78" id="BNm-6Y-pka"/>
+                            <constraint firstItem="G2g-cy-wZe" firstAttribute="trailing" secondItem="w9t-bn-k40" secondAttribute="trailing" constant="66" id="CJ3-Zy-rcQ"/>
+                            <constraint firstItem="G2g-cy-wZe" firstAttribute="bottom" secondItem="bns-T2-vMZ" secondAttribute="bottom" constant="115" id="CKE-3X-g3M"/>
+                            <constraint firstItem="e3n-Ij-M0I" firstAttribute="leading" secondItem="bns-T2-vMZ" secondAttribute="leading" id="FBd-q9-MxB"/>
+                            <constraint firstItem="vJ2-jj-Ldi" firstAttribute="leading" secondItem="G2g-cy-wZe" secondAttribute="leading" constant="122" id="Lbp-AT-s8S"/>
+                            <constraint firstItem="bns-T2-vMZ" firstAttribute="top" secondItem="4i8-3V-nEs" secondAttribute="bottom" constant="8" id="LoY-Dt-8xK"/>
+                            <constraint firstItem="4i8-3V-nEs" firstAttribute="top" secondItem="vJ2-jj-Ldi" secondAttribute="bottom" constant="5" id="Ych-NE-emX"/>
+                            <constraint firstItem="w9t-bn-k40" firstAttribute="top" secondItem="e3n-Ij-M0I" secondAttribute="bottom" constant="39" id="gaN-Z9-iJE"/>
+                            <constraint firstItem="vJ2-jj-Ldi" firstAttribute="top" secondItem="w9t-bn-k40" secondAttribute="bottom" constant="6" id="h3d-pn-UUU"/>
+                            <constraint firstItem="vJ2-jj-Ldi" firstAttribute="centerX" secondItem="M12-ee-BeB" secondAttribute="centerX" id="hX8-qW-kpB"/>
+                            <constraint firstItem="e3n-Ij-M0I" firstAttribute="leading" secondItem="w9t-bn-k40" secondAttribute="leading" id="oQC-sP-e7f"/>
+                            <constraint firstItem="e3n-Ij-M0I" firstAttribute="trailing" secondItem="w9t-bn-k40" secondAttribute="trailing" id="wz4-ro-NCN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G2g-cy-wZe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="HOME" image="house" catalog="system" id="O9x-Zs-SvW"/>
+                    <navigationItem key="navigationItem" id="sbQ-gb-gxb"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="4i8-3V-nEs" id="0Qv-dE-8DK"/>
+                        <outlet property="favouriteJoke" destination="vJ2-jj-Ldi" id="ygW-hb-iOD"/>
+                        <outlet property="imageView" destination="w9t-bn-k40" id="Xe4-f6-dPe"/>
+                        <outlet property="nextJoke" destination="bns-T2-vMZ" id="Al9-pW-3t9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtW-A9-Srd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="-629.2353823088456"/>
+        </scene>
+        <!--JowkzAlbumController-->
+        <scene sceneID="DKb-sG-Du9">
+            <objects>
+                <viewController title="JowkzAlbumController" id="MfJ-5N-AMw" customClass="JowkzAlbumController" customModule="Jowkz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sm2-Mg-p6k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RJr-9K-0hb">
+                                <rect key="frame" x="0.0" y="66" width="375" height="601"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5kB-PH-iAf">
+                                    <size key="itemSize" width="162" height="142"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KBh-x9-Flc" customClass="PhotoCell" customModule="Jowkz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="142"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xqh-Ni-hOA">
+                                            <rect key="frame" x="0.0" y="0.0" width="162" height="142"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JiM-7v-sgJ">
+                                                    <rect key="frame" x="-39" y="6" width="240" height="136"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="162" height="142"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="JiM-7v-sgJ" id="bdI-XR-r6P"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lo-K1-Ku3" userLabel="Jowkz Gallery">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="W1R-Ud-1Lw"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Jowkz Gallery!">
+                                        <attributes>
+                                            <font key="NSFont" size="48" name="DINCondensed-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7lo-K1-Ku3" firstAttribute="top" secondItem="D4E-hn-vLX" secondAttribute="top" id="2jT-0O-9R9"/>
+                            <constraint firstItem="7lo-K1-Ku3" firstAttribute="centerX" secondItem="Sm2-Mg-p6k" secondAttribute="centerX" id="3cY-af-rpu"/>
+                            <constraint firstItem="D4E-hn-vLX" firstAttribute="bottom" secondItem="7lo-K1-Ku3" secondAttribute="bottom" constant="547" id="6XF-Pi-nZM"/>
+                            <constraint firstItem="RJr-9K-0hb" firstAttribute="top" secondItem="D4E-hn-vLX" secondAttribute="top" constant="66" id="FZC-91-c29"/>
+                            <constraint firstItem="RJr-9K-0hb" firstAttribute="centerX" secondItem="7lo-K1-Ku3" secondAttribute="centerX" id="L6I-UU-TDK"/>
+                            <constraint firstItem="RJr-9K-0hb" firstAttribute="leading" secondItem="D4E-hn-vLX" secondAttribute="leading" id="OY9-xB-BZW"/>
+                            <constraint firstItem="7lo-K1-Ku3" firstAttribute="leading" secondItem="D4E-hn-vLX" secondAttribute="leading" id="PKz-vK-dW5"/>
+                            <constraint firstItem="7lo-K1-Ku3" firstAttribute="top" secondItem="D4E-hn-vLX" secondAttribute="top" id="SLL-uD-f23"/>
+                            <constraint firstItem="D4E-hn-vLX" firstAttribute="bottom" secondItem="7lo-K1-Ku3" secondAttribute="bottom" constant="547" id="UX4-FT-VUr"/>
+                            <constraint firstItem="7lo-K1-Ku3" firstAttribute="top" secondItem="D4E-hn-vLX" secondAttribute="top" id="cL1-c2-Oie"/>
+                            <constraint firstItem="7lo-K1-Ku3" firstAttribute="trailing" secondItem="D4E-hn-vLX" secondAttribute="trailing" id="tCR-bq-7ZR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="RJr-9K-0hb" secondAttribute="bottom" constant="-49" id="uK7-G8-K48"/>
+                            <constraint firstItem="D4E-hn-vLX" firstAttribute="bottom" secondItem="7lo-K1-Ku3" secondAttribute="bottom" constant="547" id="zBa-jP-0U8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D4E-hn-vLX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favourite" image="star.fill" catalog="system" id="22U-0o-Cmt"/>
+                    <connections>
+                        <outlet property="collectionPhotoView" destination="RJr-9K-0hb" id="9jg-Cw-UX5"/>
+                        <outlet property="flowLayout" destination="5kB-PH-iAf" id="dAe-FB-pte"/>
+                        <outlet property="label" destination="7lo-K1-Ku3" id="oyd-Zm-aR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DL2-em-6ht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="71.514242878560722"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sTQ-ez-grE">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="Ix0-Yh-Dw1" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UZW-iu-Ag8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Rc0-iN-C6b" kind="relationship" relationship="viewControllers" id="px8-kc-Wc1"/>
+                        <segue destination="MfJ-5N-AMw" kind="relationship" relationship="viewControllers" id="A1l-0q-S6q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4mI-DR-POY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="-289"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="32" height="32"/>
+        <image name="star.fill" catalog="system" width="32" height="32"/>
+    </resources>
+</document>
